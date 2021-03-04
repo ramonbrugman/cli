@@ -9,7 +9,7 @@ ARG ESC_VERSION=v0.2.0
 RUN --mount=type=cache,target=/root/.cache/go-build \
     --mount=type=cache,target=/go/pkg/mod \
     --mount=type=tmpfs,target=/go/src/ \
-    GO111MODULE=on go get github.com/mjibson/esc@${ESC_VERSION}
+    GO111MODULE=on go get github.com/ramonbrugman/esc@${ESC_VERSION}
 
 FROM golang AS gotestsum
 ARG GOTESTSUM_VERSION=v0.4.0
